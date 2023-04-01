@@ -11,6 +11,9 @@ export class AppComponent {
   isLogged = false;
 
   constructor(private loginService: LoginService) {
-    this.loginService.getIsLogged().subscribe((e) => (this.isLogged = e));
+    this.loginService.getIsLogged().subscribe((e) => {
+      console.log(e);
+      this.isLogged = e;
+    });
   }
 }

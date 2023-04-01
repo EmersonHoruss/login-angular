@@ -13,7 +13,7 @@ export class LoginService {
 
   constructor() {}
 
-  public setIsLogged(isLogged: boolean): void {
+  private setIsLogged(isLogged: boolean): void {
     this.isLogged.next(isLogged);
     this.setIsLoggedFromLocalStorage();
   }
